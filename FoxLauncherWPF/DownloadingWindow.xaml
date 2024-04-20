@@ -1,0 +1,28 @@
+﻿<Window x:Class="FoxLauncherWPF.DownloadingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Icon="fox.ico"
+        Title="Загрузка">
+    <Viewbox Stretch="Uniform">
+        <Grid Width="460" Height="160">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <ProgressBar Name="progressBar" Width="200" Height="20" Margin="10" BorderThickness="0"/>
+                <TextBox Name="statusTextBox" Text="Статус загрузки" Width="221" Height="40" Margin="10" IsReadOnly="True" BorderThickness="0"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Height="93">
+                <Button Name="btnLogs" Content="Показать логи" Width="100" Margin="10" Height="22" BorderThickness="0"/>
+                <Image gif:ImageBehavior.AnimatedSource="fox.gif" Width="100" Height="100" Margin="10"/>
+            </StackPanel>
+        </Grid>
+    </Viewbox>
+</Window>

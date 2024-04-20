@@ -1,0 +1,26 @@
+﻿<Window x:Class="FoxLauncherWPF.LogsWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Icon="fox.ico"
+        Title="Логи">
+    <Viewbox Stretch="Uniform">
+        <Grid Width="460" Height="160">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <TextBox Name="Debug" Width="400" Height="96" TextWrapping="Wrap" IsReadOnly="True" BorderThickness="0"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Height="69" Margin="0,5,0,0">
+                <Image gif:ImageBehavior.AnimatedSource="fox.gif" Width="100" Height="50"/>
+                <Button Name="btnBack" Content="Вернуться" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" BorderThickness="0"/>
+            </StackPanel>
+        </Grid>
+    </Viewbox>
+</Window>
